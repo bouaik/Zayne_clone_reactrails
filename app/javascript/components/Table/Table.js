@@ -14,7 +14,11 @@ class Table extends Component {
 
     render() {
         const items = this.props.course_modules.map((data, index) => {
-            return <Item key={data.id} title={data.title} description={data.description} />
+            return (
+                data.active ?
+                    <ActiveItem key={data.id} title={data.title} description={data.description} /> :
+                    <Item key={data.id} title={data.title} description={data.description} />
+            )
         })
 
         return (
