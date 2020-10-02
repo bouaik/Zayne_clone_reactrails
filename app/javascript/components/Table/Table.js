@@ -12,13 +12,17 @@ class Table extends Component {
 
 
     render() {
+        const items = this.props.course_modules.map((data, index) => {
+            return <Item key={data.id} title={data.title} description={data.description} />
+        })
+
         return (
             <div className='py-5'>
                 <div className='container'>
                     <div className="text-center">
                         <h2 className='py-2'>React for rails developers - videos</h2>
-                        <Item />
                     </div>
+                    {items}
                 </div>
             </div>
         )
