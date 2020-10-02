@@ -7,5 +7,4 @@ class PagesController < ApplicationController
 
     render json: {data: @episodes}
   end
-
 end

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Table from '../Table/Table'
 import Jumbotron from './Jumbotron'
+import axios from 'axios'
 
 class Home extends Component {
     constructor() {
@@ -12,6 +13,20 @@ class Home extends Component {
             ]
         }
     }
+
+    componentDidMount() {
+        axios.get('/episodes.json')
+            .then(data => {
+                let res = []
+                data.data.data.map((data) => {
+                    res.push({ id: data.id, title: data.title, description: data.description, active: false })
+                    this.setState({ course_modules: res })
+                })
+            })
+            .catch(data => {
+            })
+    }
+
     handleVideoChange(item, e) {
         e.preventDefault()
 
