@@ -1,6 +1,7 @@
 import React from 'react'
 import Thumbnail from './Thumbnail'
 import styled from 'styled-components'
+import Video from './Video'
 
 const Button = styled.a`
     display: inline-block;
@@ -25,7 +26,7 @@ const ActiveItem = (props) => {
                     <div className='card px-5'>
                         <div className="row">
                             <div className='col-md-10 offset-md-1'>
-                                <Thumbnail />
+                                <Video />
                                 <div className='py-4'>
                                     <h4>{props.title}</h4>
                                     <p>{props.description}</p>

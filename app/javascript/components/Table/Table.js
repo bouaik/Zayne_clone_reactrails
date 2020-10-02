@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Item from './Item'
+import ActiveItem from './ActiveItem'
 
 class Table extends Component {
     constructor(props) {
