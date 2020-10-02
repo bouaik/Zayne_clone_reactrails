@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Item from './Item'
 
 class Table extends Component {
     constructor(props) {
@@ -16,6 +17,7 @@ class Table extends Component {
                 <div className='container'>
                     <div className="text-center">
                         <h2 className='py-2'>React for rails developers - videos</h2>
+                        <Item />
                     </div>
                 </div>
             </div>
