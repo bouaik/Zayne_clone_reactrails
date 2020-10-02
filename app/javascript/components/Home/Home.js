@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Table from '../Table/Table'
 import Jumbotron from './Jumbotron'
 
 class Home extends Component {
@@ -20,6 +21,7 @@ class Home extends Component {
         return (
             <div>
                 <Jumbotron />
+                <Table />
             </div>
         )
     }
